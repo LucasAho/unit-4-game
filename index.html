@@ -3,7 +3,48 @@
     <head>
         <meta charset="UTF-8">
         <title>Crystal Collector Game</title>
-        <link rel = "stylesheet" type = "text/css" href = "unit-4-game\Assets\css\style.css">
-        <link rel = "stylesheet" type = "text/css" href = "unit-4-game\Assets\css\reset.css">
-    </head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="Assets\css\style.css">
+        <script type="text/javascript" scr="Assets\javascript\game.js"></script>
+
+    <body>
+    <container>  
+        <!--This row contains the typography and positioning of the game's header-->
+        <div class= "row">
+            <div class="col-4 ml-4 my-3" id="head">
+                <h1>Crystals Collector</h1>
+            </div>
+        </div>
+        <!--This row contains the game instructions and holds no dynamic elements-->
+        <div class= "row">
+            <div class="col-5 ml-4" id="instruct">
+                <p>You will be given a random number at the start of the gam.</p>
+                <br>
+                <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+                <br>
+                <p>You win the game by matching your total score to the random number; you lose the game if your total score goes above the random number.</p>
+                <br>
+                <p>The value of each crystal is hidden from you until you click on it.</p>
+                <br>
+                <p>Each time when the game starts, the values of each crystal will change.</p>
+            </div>
+        </div>
+        <!--This row contains the text holders for the player's goal and their wins and losses-->
+        <div class="row" id="playerStats">
+            <div class="col-2"><span id="scoreSet-text"></span></div>
+            <div class="col-1"><span id="scoreBoard-text"></span></div>
+        </div>
+        <!--This row contains the image buttons used for adding up a score-->
+        <div class="row" id="gemSlots">
+            <div class="button" id="gemSlot1"><img src= "Assets\images\GemOne.png"></div>
+            <div class="button" id="gemSlot2"><img src= "Assets\images\GemTwo.png"></div>
+            <div class="button" id="gemSlot3"><img src= "Assets\images\GemThree.png"></div>
+            <div class="button" id="gemSlot4"><img src= "Assets\images\GemFour.png"></div>
+        </div>
+        <!--This row contains text holder player scorebox header-->
+        <!--This row contains text holder for player's dynamic score-->
+        <script type="text/javascript" src="Assets\javascript\game.js"></script>
+    </container>  
+    
+    </body>
 </html>

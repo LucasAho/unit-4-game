@@ -1,0 +1,15 @@
+/*Visual settings of webpage*/
+#instruct {
+    background-color: rgb(50, 160, 50);    
+}
+#head {
+    background-color:purple;
+    padding: 20px;
+}
+body {
+    background-color: skyblue;
+}
+img {
+    width: 100px;
+    height: 100px;
+}
