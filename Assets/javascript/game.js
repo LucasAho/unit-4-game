@@ -56,7 +56,7 @@ if (wins === 0 && losses === 0) {
 }
 
 //Score check looks if players have added enough points to win or lose the game
-function scoreCheck() {    \
+function scoreCheck() {  
     //If player has won the game, this runs
     if (playerScore === numGoal){        
         wins++;
