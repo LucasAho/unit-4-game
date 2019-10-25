@@ -1,15 +1,24 @@
 # Crystal Collector
-A game where players must blindly add up their number by clicking different crystals in efforts to get it equal to a goal number which is randomly generated.
+A game that utilizes javascript and jquery in order to randomly assign numerical values to gems and a player goal. The player must use these buttons to get their score equal to the goal. The game is deployed to https://lucasaho.github.io/unit-4-game/.
 
 ## Game Description
-When players reach this score, they are either given a point towards their wins and a message displaying that they won, or if they go over the goal score, they are given a message showing that they lost, and their number of losses increases. At this point, the game will assign a new number to reach and new values to the crystals. It self resets all scores except the win and loss count, but these will be lost if the page is refreshed. 
+As players click on the gem buttons, a value is added to their score. When players reach their goal score or go over it, their score is checked for a win or loss condition, and a point will be added to their wins or losses accordingly and display a message. At this point, the game will assign a new number to reach and new values to the crystals, allowing players to endlessly increase their wins. The wins and losses will only be reset to 0 on a page refresh. 
 
 ## File Infrastructure
-(index.html) contains the instructions and html framework of the game, as well as links to Bootstrap, Jquery, the javascript external file, and the css external file
+### HTML
+  * index.html: Contains the instructions and html framework of the game, as well as links to Bootstrap, Jquery, the javascript external file, and the css external file
 
-(Assets\javascript\game.js) contains the actual logic involved in the game and controls assigning gems values, counting up player scores, and resetting the game upon win or loss conditions
+### Javascript
+  * game.js: Contains the actual logic involved in the game and controls assigning gems values, counting up player scores, and resetting the game upon win or loss conditions.
 
-(Assets\images) contains 4 images used as buttons when adding up a score
+### Image assets 
+Contains the following images to be used as buttons when adding up a score
+![Image of GemOne](https://github.com/LucasAho/unit-4-game/blob/master/Assets/images/GemOne.png?raw=true)
+![Image of GemTwo](https://github.com/LucasAho/unit-4-game/blob/master/Assets/images/GemTwo.png?raw=true)
+![Image of GemOne](https://github.com/LucasAho/unit-4-game/blob/master/Assets/images/GemThree.png?raw=true)
+![Image of GemOne](https://github.com/LucasAho/unit-4-game/blob/master/Assets/images/GemFour.png?raw=true)
 
-(Assets\css\style.css) contains the typography and visual settings of any HTML sections not set with bootstrap
+###CSS
+  * style.css: Contains the typography and visual settings of any HTML sections not set with bootstrap.
+  * Bootstrap is also linked within index.html and is primarily used for site framework.
 
