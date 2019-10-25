@@ -18,7 +18,7 @@ Contains the following images to be used as buttons when adding up a score
 * ![Image of GemOne](https://github.com/LucasAho/unit-4-game/blob/master/Assets/images/GemThree.png?raw=true)
 * ![Image of GemOne](https://github.com/LucasAho/unit-4-game/blob/master/Assets/images/GemFour.png?raw=true)
 
-###CSS
+### CSS
   * style.css: Contains the typography and visual settings of any HTML sections not set with bootstrap.
   * Bootstrap is also linked within index.html and is primarily used for site framework.
 
