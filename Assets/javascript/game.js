@@ -13,6 +13,12 @@ var wins = 0;
 var losses = 0;
 var playerScore = 0;
 
+//Writes player scores to page
+
+$("#playerScore").html(playerScore);
+$("#scoreWin-text").html(" " + wins);
+$("#scoreLoss-text").html(" " + losses);
+
 //Gem values object initializes the gem values and the goal to beat
 var gemValues = {
     gemOne: 0,
@@ -31,24 +37,43 @@ var gemValues = {
         
     },  
     startGoal: function() {
+        if (numGoal === 0) {
         numGoal = Math.floor(Math.random()*121)+18;
-        console.log(numGoal);
-    },  
-    
+        $("#scoreSet-text").html(numGoal);
+        return numGoal;
+        }
+    },   
 }
+function reset() {
+    gemValues.gemSet();
+    gemValues.startGoal();
+    playerScore = 0;
+    numGoal = Math.floor(Math.random()*121)+18;
+    $("#scoreSet-text").html(numGoal);
+    $("#playerScore").html(playerScore);
+}
+function start() {
+    gemValues.startGoal();
+    gemValues.gemSet();
+}
+if (wins === 0) {
+    start();
+}
+
 function scoreCheck() {
     
-    if (playerScore === numGoal){
-        alert("wow!");
-    } else if (playerScore > numGoal){
-        alert("oof");
+    if (playerScore === numGoal){        
+        wins++;
+        reset();
+        $("#winlossNote").html("You won!!!<br>");
+    } else if (playerScore > numGoal){        
+        losses++;
+        reset();
+        $("#winlossNote").html("You lost!!!<br>");
     }
+    $("#scoreWin-text").html(" " + wins);
+    $("#scoreLoss-text").html(" " + losses);
 }
-
-
-//Calls value initializers
-gemValues.startGoal();
-gemValues.gemSet();
 
 //Adds to player score based on button clicked
 $("#gemSlot1").click(function(){
@@ -72,13 +97,6 @@ $("#gemSlot4").click(function(){
     scoreCheck();     
 })
 
-//Writes player scores to page
-if (numGoal !== 0) {
-    $("#scoreSet-text").html(numGoal);
-}
-$("#playerScore").html(playerScore);
-$("#scoreWin-text").html(" " + wins);
-$("#scoreLoss-text").html(" " + losses);
 
 
 
