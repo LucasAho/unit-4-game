@@ -13,10 +13,10 @@ As players click on the gem buttons, a value is added to their score. When playe
 
 ### Image assets 
 Contains the following images to be used as buttons when adding up a score
-![Image of GemOne](https://github.com/LucasAho/unit-4-game/blob/master/Assets/images/GemOne.png?raw=true)
-![Image of GemTwo](https://github.com/LucasAho/unit-4-game/blob/master/Assets/images/GemTwo.png?raw=true)
-![Image of GemOne](https://github.com/LucasAho/unit-4-game/blob/master/Assets/images/GemThree.png?raw=true)
-![Image of GemOne](https://github.com/LucasAho/unit-4-game/blob/master/Assets/images/GemFour.png?raw=true)
+* ![Image of GemOne](https://github.com/LucasAho/unit-4-game/blob/master/Assets/images/GemOne.png?raw=true)
+* ![Image of GemTwo](https://github.com/LucasAho/unit-4-game/blob/master/Assets/images/GemTwo.png?raw=true)
+* ![Image of GemOne](https://github.com/LucasAho/unit-4-game/blob/master/Assets/images/GemThree.png?raw=true)
+* ![Image of GemOne](https://github.com/LucasAho/unit-4-game/blob/master/Assets/images/GemFour.png?raw=true)
 
 ###CSS
   * style.css: Contains the typography and visual settings of any HTML sections not set with bootstrap.
