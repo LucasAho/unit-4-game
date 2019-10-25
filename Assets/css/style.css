@@ -9,7 +9,25 @@
 body {
     background-color: skyblue;
 }
+p {
+    margin: 0px;
+}
 img {
+    margin: 5px;
     width: 100px;
     height: 100px;
+}
+
+#score{
+    background-color: purple;
+    color: yellow;
+    font-size: 30px;
+}
+#scoreSet{
+    background-color: blue;
+    color: red;
+    font-size: 75px;
+}
+#playerScore {
+    font-size: 50px;
 }

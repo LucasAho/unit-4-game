@@ -5,9 +5,12 @@
         <title>Crystal Collector Game</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="Assets\css\style.css">
-        <script type="text/javascript" scr="Assets\javascript\game.js"></script>
-
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+        
+        
+    </head>
     <body>
+            
     <container>  
         <!--This row contains the typography and positioning of the game's header-->
         <div class= "row">
@@ -17,7 +20,7 @@
         </div>
         <!--This row contains the game instructions and holds no dynamic elements-->
         <div class= "row">
-            <div class="col-5 ml-4" id="instruct">
+            <div class="col-5 ml-4 pb-2" id="instruct">
                 <p>You will be given a random number at the start of the gam.</p>
                 <br>
                 <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
@@ -30,21 +33,27 @@
             </div>
         </div>
         <!--This row contains the text holders for the player's goal and their wins and losses-->
-        <div class="row" id="playerStats">
-            <div class="col-2"><span id="scoreSet-text"></span></div>
-            <div class="col-1"><span id="scoreBoard-text"></span></div>
+        <div class="row mx-n1 m-3" id="playerStats">
+            <div class="col-2 px-5 mx-3" id="scoreSet"><span id="scoreSet-text"></span></div>
+            <div class="col-2 px-5 pt-2" id="score">Wins:<span id="scoreWin-text"></span>
+            <br>Losses:<span id="scoreLoss-text"></span></div>
         </div>
         <!--This row contains the image buttons used for adding up a score-->
         <div class="row" id="gemSlots">
-            <div class="button" id="gemSlot1"><img src= "Assets\images\GemOne.png"></div>
-            <div class="button" id="gemSlot2"><img src= "Assets\images\GemTwo.png"></div>
-            <div class="button" id="gemSlot3"><img src= "Assets\images\GemThree.png"></div>
-            <div class="button" id="gemSlot4"><img src= "Assets\images\GemFour.png"></div>
+            <button class="button mx-2 ml-4" id="gemSlot1"><img src= "Assets\images\GemOne.png"></button>
+            <button class="button mx-2" id="gemSlot2"><img src= "Assets\images\GemTwo.png"></button>
+            <button class="button mx-2" id="gemSlot3"><img src= "Assets\images\GemThree.png"></button>
+            <button class="button mx-2" id="gemSlot4"><img src= "Assets\images\GemFour.png"></button>
         </div>
         <!--This row contains text holder player scorebox header-->
+        <div class="row">
+            <div class= "col-3 bg-info ml-4 m-2">Your total score is: </div>
+        </div>
         <!--This row contains text holder for player's dynamic score-->
-        <script type="text/javascript" src="Assets\javascript\game.js"></script>
+        <div class="row">
+            <div class= "col-3 bg-info py-4 ml-4 mt-2"><span id="playerScore"></span></div>
+        </div>
     </container>  
-    
+    <script src="Assets\javascript\game.js"></script>
     </body>
 </html>

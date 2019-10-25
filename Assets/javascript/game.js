@@ -7,8 +7,13 @@
 //restart
     //not with refresh
 
+//Game values
+var numGoal = 0;
+var wins = 0;
+var losses = 0;
+var playerScore = 0;
 
-//Lets begin by console logging five random variables
+//Gem values object initializes the gem values and the goal to beat
 var gemValues = {
     gemOne: 0,
     gemTwo: 0,
@@ -23,19 +28,67 @@ var gemValues = {
         this.gemTwo = numHold[1];
         this.gemThree = numHold[2];
         this.gemFour = numHold[3];
-        console.log(numHold);
-    },
-    
+        
+    },  
+    startGoal: function() {
+        numGoal = Math.floor(Math.random()*121)+18;
+        console.log(numGoal);
+    },  
     
 }
+function scoreCheck() {
+    
+    if (playerScore === numGoal){
+        alert("wow!");
+    } else if (playerScore > numGoal){
+        alert("oof");
+    }
+}
+
+
+//Calls value initializers
+gemValues.startGoal();
 gemValues.gemSet();
-console.log(gemValues.gemOne);
+
+//Adds to player score based on button clicked
+$("#gemSlot1").click(function(){
+    playerScore= playerScore + gemValues.gemOne;
+    $("#playerScore").html(playerScore);
+    scoreCheck();    
+})
+$("#gemSlot2").click(function(){
+    playerScore= playerScore + gemValues.gemTwo;
+    $("#playerScore").html(playerScore);
+    scoreCheck(); 
+})
+$("#gemSlot3").click(function(){
+    playerScore= playerScore + gemValues.gemThree;
+    $("#playerScore").html(playerScore);
+    scoreCheck(); 
+})
+$("#gemSlot4").click(function(){
+    playerScore= playerScore + gemValues.gemFour;
+    $("#playerScore").html(playerScore);
+    scoreCheck();     
+})
+
+//Writes player scores to page
+if (numGoal !== 0) {
+    $("#scoreSet-text").html(numGoal);
+}
+$("#playerScore").html(playerScore);
+$("#scoreWin-text").html(" " + wins);
+$("#scoreLoss-text").html(" " + losses);
+
+
+
+
+
+
+
 
 
 
 
     
 
-
-//gems:1-12
-//guess:18-120
