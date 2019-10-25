@@ -12,7 +12,7 @@ As players click on the gem buttons, a value is added to their score. When playe
   * game.js: Contains the actual logic involved in the game and controls assigning gems values, counting up player scores, and resetting the game upon win or loss conditions.
 
 ### Image assets 
-Contains the following images to be used as buttons when adding up a score
+Contains the following images to be used as buttons for adding up a score
 * ![Image of GemOne](https://github.com/LucasAho/unit-4-game/blob/master/Assets/images/GemOne.png?raw=true)
 * ![Image of GemTwo](https://github.com/LucasAho/unit-4-game/blob/master/Assets/images/GemTwo.png?raw=true)
 * ![Image of GemOne](https://github.com/LucasAho/unit-4-game/blob/master/Assets/images/GemThree.png?raw=true)
